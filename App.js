@@ -5,6 +5,7 @@ import Characters from "Clase 92-Routing/components/Characters";
 import Navigation from "Clase 92-Routing/components/Navigation";
 import Comics from "Clase 92-Routing/components/Comics";
 import Character from "Clase 92-Routing/components/Character";
+import Comic from "Clase 92-Routing/components/Comic";
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
           <Route exact path="/characters" component={Characters}></Route>
           <Route
             exact
-            path="/characters:characterID"
+            path="/characters/:characterID"
             component={Character}
           ></Route>
+          <Route exact path="/comics/:comicID" component={Comic}></Route>
         </Switch>
       </Router>
     </>
